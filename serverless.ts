@@ -1,7 +1,5 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
-
 const serverlessConfiguration: AWS = {
   service: 'tateyomi-api',
   frameworkVersion: '2',
@@ -18,7 +16,11 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { hello },
+  functions: {
+    hello: {
+      image: 'xxx' // 仮設定
+    }
+  }
 };
 
 module.exports = serverlessConfiguration;

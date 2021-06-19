@@ -2,10 +2,14 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './handler.ts',
+  entry: './src/functions/hello/handler.ts',
   devtool: 'source-map',
   resolve: {
     extensions: ['.mjs', '.json', '.ts'],
+    alias: {
+      '@libs/': path.resolve('var/task/src/libs/'),
+      '@functions/': path.resolve('var/task/src/functions/'),
+    },
     symlinks: false,
     cacheWithContext: false,
   },
@@ -39,12 +43,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    // new ForkTsCheckerWebpackPlugin({
-    //   eslint: true,
-    //   eslintOptions: {
-    //     cache: true
-    //   }
-    // })
-  ],
 };
