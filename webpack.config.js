@@ -7,8 +7,8 @@ module.exports = {
   resolve: {
     extensions: ['.mjs', '.json', '.ts'],
     alias: {
-      '@libs/': path.resolve('var/task/src/libs/'),
-      '@functions/': path.resolve('var/task/src/functions/'),
+      '@libs': path.resolve(__dirname, 'src/libs'),
+      '@functions': path.resolve(__dirname, 'src/functions'),
     },
     symlinks: false,
     cacheWithContext: false,
