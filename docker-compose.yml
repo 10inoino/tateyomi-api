@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  tateyomi-api:
+    build: 
+      context: .
+      # argsの設定方法が分からんので一旦コメントアウト
+      # args: 
+      #   - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      #   - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+    tty: true
+    volumes:
+      - .:/var/task
+    container_name: tateyomi-api-container
+    env_file:
+      - docker.env

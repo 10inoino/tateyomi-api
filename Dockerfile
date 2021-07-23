@@ -1,15 +1,11 @@
-FROM amazon/aws-lambda-nodejs:14
-ARG FUNCTION_DIR="/var/task"
+FROM nestjs/cli
 
-# Create function directory
-RUN mkdir -p ${FUNCTION_DIR}
+# なんかdocker.envから読んでくれないので、一旦コメントアウト
+# ARG AWS_ACCESS_KEY_ID
+# ARG AWS_SECRET_ACCESS_KEY
 
-COPY package*.json tsconfig.json ${FUNCTION_DIR}
-COPY src/ ${FUNCTION_DIR}/src/
-COPY dist/ ${FUNCTION_DIR}
+WORKDIR /var/task
 
-# check files
-RUN ls -l
+COPY package*.json ./
 
-RUN npm i
-CMD [ "handler.handler" ]
+RUN npm install
