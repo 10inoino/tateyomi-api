@@ -91,7 +91,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "tateyomi-api-deploymentbucket",
-          "S3Key": "serverless/tateyomi-api/dev/1625995682702-2021-07-11T09:28:02.702Z/index.zip"
+          "S3Key": "serverless/tateyomi-api/dev/1627018475391-2021-07-23T05:34:35.391Z/index.zip"
         },
         "Handler": "dist/handler.handler",
         "Runtime": "nodejs14.x",
@@ -328,7 +328,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1625995679373": {
+    "ApiGatewayDeployment1627018472145": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

@@ -25,15 +25,14 @@ package:
  exclude:
    - "**"
 functions:
-  index:
-    events:
-      - http:
-        cors: true
-        path: "/"
-        method: any
-      - http:
-        cors: true
-        path: "{proxy+}"
-        method: any
-    image:
-      name: tateyomi-api-container-nestjs
+ index:
+   handler: dist/handler.handler
+   events:
+     - http:
+         cors: true
+         path: "/"
+         method: any
+     - http:
+         cors: true
+         path: "{proxy+}"
+         method: any
