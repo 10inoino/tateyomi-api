@@ -33,3 +33,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 node_modules
+
+# Docker
+docker.env
+
+### Serverless ###
+# Ignore build directory
+.serverless
